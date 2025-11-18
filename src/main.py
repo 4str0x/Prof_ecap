@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.on_event("startup") 
+@app.on_event("startup")  # type: ignore
 async def startup_event():
     await init_db()
 
